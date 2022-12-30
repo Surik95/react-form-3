@@ -26,7 +26,7 @@ export default function Photo() {
     // У вас в массиве - dataUrl, можете использовать в качестве значения атрибута src тега img
     debugger;
     const arrImage = urls.map((item) => {
-      return { id: shortid, src: item };
+      return { id: shortid(), src: item };
     });
     setImage((prev) => [...prev, ...arrImage]);
     console.log(image);
