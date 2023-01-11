@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import shortid from "shortid";
 import ListPhoto from "./ListPhoto";
 
@@ -29,7 +29,7 @@ export default function Photo() {
       return { id: shortid(), src: item };
     });
     setImage((prev) => [...prev, ...arrImage]);
-    console.log(image);
+    evt.target.value = "";
   };
 
   const deleteImage = (id) => {
